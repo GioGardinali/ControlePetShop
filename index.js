@@ -9,7 +9,7 @@ function DadosPet(id, nome, animal, raca, dono){
     this.animal = animal,
     this.raca = raca,
     this.dono = dono
-}
+};
 
 function createFile(objeto) {
     fs.readFile('./pets.json', 'utf-8', (err, dados) => {
@@ -32,14 +32,14 @@ function buscar(pet){
         let {nome} = results[nomePet];
 
         if(pet == nome){
-            console.log(results[nomePet]);
+            console.table(results[nomePet]);
         }
     }
 }
 
 function id(){
-    return results.length + 1
-}
+    return results.length + 1;
+};
 
 function removeDuplicates(array) {
     let setArray = new Set(array);
@@ -51,7 +51,7 @@ function removeDuplicates(array) {
 inquirer.prompt(INICIO).then(resposta =>{
     if(resposta.escolha == 0 ){
         inquirer.prompt(CADASTRO).then(resposta => {
-            const novoPet = new DadosPet(id(), resposta.petNome, resposta.qualAnimal, resposta.raca, resposta.donoPet)
+            const novoPet = new DadosPet(id(), resposta.petNome, resposta.qualAnimal, resposta.raca, resposta.donoPet);
        
                 createFile(novoPet);
             });
@@ -80,5 +80,5 @@ inquirer.prompt(INICIO).then(resposta =>{
             let procurarNome = listaNom.buscarPet;
             buscar(procurarNome);
         }
-    )}
+    )};
 });

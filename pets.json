@@ -7,13 +7,15 @@
       "raca": "não tem",
       "dono": "Giovanna"
     },
-    {"id": 2,
+    {
+      "id": 2,
       "nome": "fulanao",
       "animal": "Cachorro",
       "raca": "não seiww",
       "dono": "Gio"
     },
-    {"id": 3,
+    {
+      "id": 3,
       "nome": "fulano",
       "animal": "Cachorro",
       "raca": "não sei",
